@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /health
+
+Sitemap: https://odontosaaspro.com.br/sitemap.xml

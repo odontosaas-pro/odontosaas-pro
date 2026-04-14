@@ -1,0 +1,53 @@
+# =============================================
+# RENDER.YAML — Deploy OdontoSaaS Pro
+# =============================================
+services:
+  - type: web
+    name: odontosaas-pro-api
+    runtime: node
+    plan: starter           # upgrade para "standard" em produção
+    region: oregon          # ou "frankfurt" para menor latência BR
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /health
+    autoDeploy: true
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false         # preencher no painel Render
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: EVOLUTION_API_URL
+        sync: false
+      - key: EVOLUTION_API_KEY
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true # Render gera automaticamente
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: ASAAS_API_KEY
+        sync: false
+      - key: ASAAS_BASE_URL
+        value: https://api.asaas.com/v3
+
+    # Scaling (plano paid)
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 80
+      targetCPUPercent: 70
+
+# ─── NOTAS DE DEPLOY ─────────────────────────
+# 1. Plano FREE hiberna após 15min — use Starter+ para produção
+# 2. RENDER_EXTERNAL_URL é injetado automaticamente pelo Render
+# 3. Configure o UptimeRobot (externo) apontando para /health
+# 4. Para Redis: usar Upstash (https://upstash.com) — compatível
+# 5. Logs disponíveis em: Render Dashboard > Logs

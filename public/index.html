@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════
+       SEO PRIMÁRIO
+  ════════════════════════════════════════════ -->
+  <title>OdontoSaaS Pro — Sistema de Gestão para Clínicas Odontológicas com IA</title>
+  <meta name="description" content="OdontoSaaS Pro: sistema completo para gestão de clínicas odontológicas com agendamento via WhatsApp, prontuário eletrônico, financeiro e IA multiagentes. Teste grátis por 7 dias.">
+  <meta name="keywords" content="software odontológico, sistema para clínica odontológica, gestão odontológica, agendamento online dentista, prontuário eletrônico odontológico, software dentista, CRM odontológico, WhatsApp clínica odontológica">
+  <meta name="author" content="OdontoSaaS Pro">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://odontosaaspro.com.br/">
+
+  <!-- ═══════════════════════════════════════════
+       OPEN GRAPH (Facebook, WhatsApp)
+  ════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odontosaaspro.com.br/">
+  <meta property="og:title" content="OdontoSaaS Pro — Gestão Inteligente para Clínicas Odontológicas">
+  <meta property="og:description" content="Automatize agendamentos, WhatsApp, financeiro e prontuários com IA. +500 clínicas já usam. Teste 7 dias grátis!">
+  <meta property="og:image" content="https://odontosaaspro.com.br/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="OdontoSaaS Pro">
+
+  <!-- ═══════════════════════════════════════════
+       TWITTER CARD
+  ════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OdontoSaaS Pro — Gestão com IA para Dentistas">
+  <meta name="twitter:description" content="Sistema completo para clínicas odontológicas. WhatsApp + Agenda + Financeiro + IA.">
+  <meta name="twitter:image" content="https://odontosaaspro.com.br/og-image.jpg">
+
+  <!-- ═══════════════════════════════════════════
+       SCHEMA.ORG — STRUCTURED DATA
+  ════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OdontoSaaS Pro",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Android, iOS",
+    "description": "Sistema completo para gestão de clínicas odontológicas com inteligência artificial multiagentes, agendamento via WhatsApp, prontuário eletrônico e gestão financeira.",
+    "url": "https://odontosaaspro.com.br",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "97.00",
+        "priceCurrency": "BRL",
+        "priceValidUntil": "2026-12-31",
+        "description": "1 dentista, agendamento WhatsApp, agenda digital"
+      },
+      {
+        "@type": "Offer",
+        "name": "Profissional",
+        "price": "247.00",
+        "priceCurrency": "BRL",
+        "description": "Até 3 dentistas, CRM, financeiro completo"
+      },
+      {
+        "@type": "Offer",
+        "name": "Clínica",
+        "price": "497.00",
+        "priceCurrency": "BRL",
+        "description": "Dentistas ilimitados, todos os módulos, relatórios avançados"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127",
+      "bestRating": "5"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Souza Produções",
+      "url": "https://odontosaaspro.com.br"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O OdontoSaaS Pro funciona com WhatsApp Business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! O sistema se integra diretamente com o WhatsApp via Evolution API, permitindo agendamentos automáticos, confirmações, lembretes e atendimento por IA diretamente no WhatsApp da sua clínica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso instalar algum programa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O OdontoSaaS Pro é 100% na nuvem. Acesse pelo navegador em qualquer dispositivo — computador, tablet ou celular."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O sistema está em conformidade com a LGPD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O OdontoSaaS Pro foi desenvolvido com conformidade total à LGPD, incluindo gestão de consentimento, direito ao esquecimento, criptografia de dados e relatórios de privacidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso migrar meus dados do sistema atual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Oferecemos migração assistida gratuita para clientes dos planos Profissional e Clínica. Nossa equipe auxilia na importação de pacientes, histórico e configurações."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    /* ═══════════════════════════════════════
+       DESIGN SYSTEM — Refinado & Elegante
+    ════════════════════════════════════════ */
+    :root {
+      --azul:      #1B4F72;
+      --azul-med:  #2874A6;
+      --azul-light:#AED6F1;
+      --verde:     #1E8449;
+      --verde-med: #27AE60;
+      --verde-light:#A9DFBF;
+      --branco:    #FAFCFF;
+      --cinza-1:   #F4F6F8;
+      --cinza-2:   #E8ECF0;
+      --cinza-txt: #5D6D7E;
+      --preto:     #1A202C;
+      --ouro:      #D4A017;
+      --font-title:'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --shadow-sm: 0 2px 8px rgba(27,79,114,.08);
+      --shadow-md: 0 8px 32px rgba(27,79,114,.12);
+      --shadow-lg: 0 20px 60px rgba(27,79,114,.16);
+      --radius:    16px;
+      --radius-sm: 8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(250,252,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cinza-2);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: var(--shadow-md); }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-title);
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--azul); text-decoration: none;
+    }
+    .nav-logo span { color: var(--verde-med); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--cinza-txt); text-decoration: none;
+      font-size: .9rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--azul); }
+
+    .btn { display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: all .25s; border-radius: 50px; }
+    .btn-primary { background: var(--azul); color: #fff; padding: 12px 28px; font-size: .95rem; }
+    .btn-primary:hover { background: var(--azul-med); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27,79,114,.3); }
+    .btn-secondary { background: transparent; color: var(--azul); padding: 11px 28px; font-size: .95rem; border: 2px solid var(--azul); }
+    .btn-secondary:hover { background: var(--azul); color: #fff; }
+    .btn-verde { background: var(--verde-med); color: #fff; padding: 16px 40px; font-size: 1.05rem; }
+    .btn-verde:hover { background: var(--verde); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(39,174,96,.35); }
+    .btn-lg { padding: 18px 48px; font-size: 1.1rem; border-radius: 50px; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #EBF5FB 0%, #FAFCFF 50%, #EAFAF1 100%);
+      display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(40,116,166,.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(27,79,114,.08); border: 1px solid rgba(27,79,114,.15);
+      border-radius: 50px; padding: 6px 16px; margin-bottom: 24px;
+      font-size: .82rem; font-weight: 600; color: var(--azul);
+    }
+    .hero-badge::before { content: '✦'; color: var(--ouro); }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 900; line-height: 1.15;
+      color: var(--azul); margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: normal; color: var(--verde-med); }
+
+    .hero p {
+      font-size: 1.1rem; color: var(--cinza-txt);
+      margin-bottom: 32px; max-width: 500px; line-height: 1.75;
+    }
+
+    .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+    .hero-stats {
+      display: flex; gap: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--cinza-2);
+    }
+    .stat-item { text-align: center; }
+    .stat-num { display: block; font-family: var(--font-title); font-size: 1.8rem; font-weight: 900; color: var(--azul); }
+    .stat-label { font-size: .8rem; color: var(--cinza-txt); font-weight: 500; }
+
+    .hero-visual {
+      position: relative;
+      background: white;
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      border: 1px solid var(--cinza-2);
+    }
+
+    .mockup-header {
+      background: var(--azul);
+      padding: 16px 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .mockup-dots { display: flex; gap: 6px; }
+    .mockup-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.3); }
+    .mockup-title { color: rgba(255,255,255,.8); font-size: .85rem; font-weight: 500; }
+
+    .mockup-body { padding: 20px; }
+
+    .chat-msg {
+      max-width: 75%; margin-bottom: 12px;
+      padding: 10px 14px; border-radius: 12px;
+      font-size: .88rem; line-height: 1.5;
+    }
+    .chat-received { background: var(--cinza-1); border-radius: 4px 12px 12px 12px; }
+    .chat-sent { background: var(--azul); color: white; margin-left: auto; border-radius: 12px 4px 12px 12px; }
+    .chat-meta { font-size: .7rem; color: var(--cinza-txt); margin-top: 2px; }
+    .chat-meta.right { text-align: right; }
+
+    .typing-indicator {
+      display: flex; gap: 4px; align-items: center;
+      padding: 10px 14px; background: var(--cinza-1);
+      border-radius: 4px 12px 12px 12px;
+      width: fit-content; margin-bottom: 12px;
+    }
+    .typing-indicator span {
+      width: 6px; height: 6px; background: var(--cinza-txt);
+      border-radius: 50%; animation: bounce .8s infinite;
+    }
+    .typing-indicator span:nth-child(2) { animation-delay: .15s; }
+    .typing-indicator span:nth-child(3) { animation-delay: .3s; }
+    @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+    /* ── SEÇÕES ── */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      background: var(--azul-light);
+      color: var(--azul);
+      border-radius: 50px; padding: 4px 14px;
+      font-size: .78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-family: var(--font-title);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700; color: var(--azul); line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .subtitle { font-size: 1.05rem; color: var(--cinza-txt); max-width: 560px; line-height: 1.75; margin-bottom: 48px; }
+
+    /* ── AGENTES ── */
+    .agentes { background: var(--azul); }
+    .agentes h2, .agentes .subtitle { color: white; }
+    .agentes .subtitle { color: rgba(255,255,255,.7); }
+    .agentes .section-tag { background: rgba(255,255,255,.15); color: rgba(255,255,255,.9); }
+
+    .agentes-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+    }
+    .agente-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius); padding: 28px;
+      transition: all .3s;
+    }
+    .agente-card:hover {
+      background: rgba(255,255,255,.1);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.2);
+    }
+    .agente-emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .agente-nome { font-family: var(--font-title); font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 4px; }
+    .agente-role { font-size: .8rem; color: rgba(255,255,255,.6); margin-bottom: 12px; }
+    .agente-desc { font-size: .88rem; color: rgba(255,255,255,.75); line-height: 1.6; }
+
+    /* ── FUNCIONALIDADES ── */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+    }
+    .feature-card {
+      background: white; border: 1px solid var(--cinza-2);
+      border-radius: var(--radius); padding: 28px;
+      transition: all .3s;
+    }
+    .feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--azul-light); }
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--cinza-1); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 16px;
+    }
+    .feature-title { font-weight: 600; color: var(--azul); margin-bottom: 8px; }
+    .feature-desc { font-size: .88rem; color: var(--cinza-txt); line-height: 1.65; }
+
+    /* ── PLANOS ── */
+    .pricing { background: var(--cinza-1); }
+    .plans-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
+      align-items: start;
+    }
+    .plan-card {
+      background: white; border: 2px solid var(--cinza-2);
+      border-radius: var(--radius); padding: 36px 28px;
+      position: relative; transition: all .3s;
+    }
+    .plan-card:hover { box-shadow: var(--shadow-md); }
+    .plan-card.destaque { border-color: var(--azul); box-shadow: var(--shadow-md); }
+    .plan-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--azul); color: white;
+      border-radius: 50px; padding: 4px 20px;
+      font-size: .78rem; font-weight: 700; white-space: nowrap;
+    }
+    .plan-nome { font-weight: 700; color: var(--cinza-txt); font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+    .plan-preco { font-family: var(--font-title); font-size: 2.4rem; font-weight: 900; color: var(--azul); }
+    .plan-preco span { font-size: .9rem; font-weight: 400; color: var(--cinza-txt); font-family: var(--font-body); }
+    .plan-desc { font-size: .85rem; color: var(--cinza-txt); margin: 12px 0 24px; }
+    .plan-features { list-style: none; margin-bottom: 28px; }
+    .plan-features li {
+      padding: 7px 0; font-size: .88rem; color: var(--preto);
+      display: flex; align-items: flex-start; gap: 8px;
+      border-bottom: 1px solid var(--cinza-1);
+    }
+    .plan-features li::before { content: '✓'; color: var(--verde-med); font-weight: 700; margin-top: 1px; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--cinza-2); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 20px 0; text-align: left;
+      font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--azul);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--azul-med); transition: transform .25s; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { display: none; padding-bottom: 20px; color: var(--cinza-txt); font-size: .95rem; line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      background: linear-gradient(135deg, var(--azul) 0%, #154360 100%);
+      text-align: center; padding: 100px 5%;
+    }
+    .cta-final h2 { color: white; margin-bottom: 16px; }
+    .cta-final p { color: rgba(255,255,255,.75); font-size: 1.05rem; margin-bottom: 40px; }
+    .cta-garantia { margin-top: 20px; color: rgba(255,255,255,.6); font-size: .85rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0D2137; color: rgba(255,255,255,.6);
+      padding: 48px 5% 24px;
+    }
+    .footer-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+      padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 24px;
+    }
+    .footer-logo { font-family: var(--font-title); font-size: 1.3rem; color: white; margin-bottom: 12px; }
+    .footer-desc { font-size: .85rem; line-height: 1.7; }
+    .footer-heading { color: white; font-weight: 600; font-size: .9rem; margin-bottom: 16px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { color: rgba(255,255,255,.55); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; font-size: .8rem; }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hero-stats { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Navegação principal">
+    <a href="/" class="nav-logo" aria-label="OdontoSaaS Pro - Início">🦷 Odonto<span>SaaS</span> Pro</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#agentes">IA Multiagentes</a></li>
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div style="display:flex;gap:12px">
+      <a href="/dashboard" class="btn btn-secondary" aria-label="Entrar no painel">Entrar</a>
+      <a href="#planos" class="btn btn-primary" aria-label="Começar teste gratuito">Teste Grátis</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">✦ Novo: IA Multiagentes com Groq LLaMA 3.3</div>
+          <h1 id="hero-title">
+            Gestão Odontológica com <em>IA que Atende pelo WhatsApp</em>
+          </h1>
+          <p>
+            7 agentes especializados trabalham 24/7 pela sua clínica — agendando consultas, confirmando horários, respondendo dúvidas e gerenciando cobranças. Tudo pelo WhatsApp, sem intervenção humana.
+          </p>
+          <div class="hero-cta">
+            <a href="#planos" class="btn btn-verde btn-lg" aria-label="Começar teste gratuito por 7 dias">🚀 Testar Grátis 7 Dias</a>
+            <a href="#agentes" class="btn btn-secondary btn-lg" aria-label="Ver demonstração dos agentes">Ver Demonstração</a>
+          </div>
+          <div class="hero-stats" aria-label="Estatísticas do produto">
+            <div class="stat-item">
+              <span class="stat-num">500+</span>
+              <span class="stat-label">Clínicas Ativas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">98%</span>
+              <span class="stat-label">Satisfação</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">24/7</span>
+              <span class="stat-label">Atendimento IA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">−60%</span>
+              <span class="stat-label">Faltas em Consultas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Simulação de atendimento via WhatsApp">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="mockup-title">🦷 Odonto SaaS Pro — WhatsApp</span>
+          </div>
+          <div class="mockup-body">
+            <div class="chat-msg chat-received">
+              Oi! Quero agendar uma consulta de limpeza para quinta-feira 😊
+            </div>
+            <div class="chat-meta">09:41</div>
+
+            <div class="typing-indicator" id="typing">
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="chat-msg chat-sent" style="display:none" id="resposta1">
+              Olá! 😊 Sou a Sofia da Clínica Oral Care! Para quinta-feira (15/01) temos horários disponíveis com a Dra. Fernanda:
+              <br><br>
+              🕘 09:00 · 🕙 10:30 · 🕑 14:00 · 🕓 16:30
+              <br><br>
+              Qual prefere?
+            </div>
+            <div class="chat-meta right" style="display:none" id="meta1">09:41 ✓✓</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         AGENTES IA
+    ════════════════════════════════════════ -->
+    <section class="agentes" id="agentes" aria-labelledby="agentes-title">
+      <div class="section-inner">
+        <div class="section-tag">IA Multiagentes</div>
+        <h2 id="agentes-title">7 Especialistas Trabalhando pela Sua Clínica</h2>
+        <p class="subtitle">Cada agente é treinado como um profissional sênior no seu setor. Sem alucinações, com respostas precisas e contextualizadas com os dados reais da sua clínica.</p>
+        <div class="agentes-grid" role="list">
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">🎯</span>
+            <div class="agente-nome">Orquestrador</div>
+            <div class="agente-role">Cérebro do Sistema</div>
+            <p class="agente-desc">Identifica a intenção do paciente com 95%+ de precisão e roteia para o agente especialista correto em milissegundos.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">📅</span>
+            <div class="agente-nome">Sofia — Agenda</div>
+            <div class="agente-role">Recepcionista Sênior</div>
+            <p class="agente-desc">Agenda, confirma, reagenda e envia lembretes. Conhece a disponibilidade de todos os dentistas em tempo real.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">🦷</span>
+            <div class="agente-nome">Dr. Ricardo — Consulta</div>
+            <div class="agente-role">Triagem Odontológica</div>
+            <p class="agente-desc">Responde dúvidas sobre procedimentos, faz triagem de urgências e informa preços. Nunca diagnostica — sempre encaminha ao dentista.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">💰</span>
+            <div class="agente-nome">Ana Paula — Financeiro</div>
+            <div class="agente-role">Gerente Financeira</div>
+            <p class="agente-desc">Negocia parcelamentos, gera links de pagamento PIX/boleto e envia alertas de vencimento com tom profissional e empático.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">📣</span>
+            <div class="agente-nome">Camila — CRM</div>
+            <div class="agente-role">Especialista em Retenção</div>
+            <p class="agente-desc">Reativa pacientes inativos, coleta NPS pós-consulta e dispara campanhas segmentadas no horário ideal.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">🛠️</span>
+            <div class="agente-nome">Lucas — Suporte</div>
+            <div class="agente-role">Especialista em Atendimento</div>
+            <p class="agente-desc">Resolve FAQs, detecta insatisfação e escala para atendente humano com todo o histórico da conversa.</p>
+          </article>
+          <article class="agente-card" role="listitem">
+            <span class="agente-emoji">⚙️</span>
+            <div class="agente-nome">Admin — Gestão Interna</div>
+            <div class="agente-role">Assistente da Equipe</div>
+            <p class="agente-desc">Responde perguntas da equipe sobre agenda, estoque e relatórios. Disponível no painel administrativo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FUNCIONALIDADES
+    ════════════════════════════════════════ -->
+    <section id="funcionalidades" aria-labelledby="features-title">
+      <div class="section-inner">
+        <div class="section-tag">Funcionalidades</div>
+        <h2 id="features-title">Tudo que Sua Clínica Precisa</h2>
+        <p class="subtitle">Do agendamento ao prontuário, do WhatsApp ao financeiro. Uma plataforma, tudo integrado.</p>
+        <div class="features-grid" role="list">
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">📅</div>
+            <h3 class="feature-title">Agenda Inteligente</h3>
+            <p class="feature-desc">Agendamento online 24/7 com confirmação automática via WhatsApp. Fila de espera e encaixes automáticos.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">🦷</div>
+            <h3 class="feature-title">Prontuário Eletrônico</h3>
+            <p class="feature-desc">Odontograma interativo, anamnese digital, armazenamento de imagens e assinatura eletrônica de documentos.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">💰</div>
+            <h3 class="feature-title">Gestão Financeira</h3>
+            <p class="feature-desc">Fluxo de caixa, PIX e boleto integrados via Asaas, emissão de NFS-e e controle de inadimplência.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">📲</div>
+            <h3 class="feature-title">WhatsApp Business</h3>
+            <p class="feature-desc">Atendimento 24/7 com IA via Evolution API. Botões interativos, listas de opções e respostas humanizadas.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Relatórios & KPIs</h3>
+            <p class="feature-desc">Dashboard com taxa de absenteísmo, receita por dentista, ticket médio e comparativos mensais.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">📦</div>
+            <h3 class="feature-title">Controle de Estoque</h3>
+            <p class="feature-desc">Alertas automáticos de estoque mínimo enviados via WhatsApp para o responsável da clínica.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">LGPD & Segurança</h3>
+            <p class="feature-desc">Criptografia AES-256, backup automático, gestão de consentimento e conformidade total com a LGPD.</p>
+          </article>
+          <article class="feature-card" role="listitem">
+            <div class="feature-icon">🤝</div>
+            <h3 class="feature-title">CRM Odontológico</h3>
+            <p class="feature-desc">Reativação automática de pacientes inativos, NPS pós-consulta e campanhas segmentadas por perfil.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PLANOS
+    ════════════════════════════════════════ -->
+    <section class="pricing" id="planos" aria-labelledby="planos-title">
+      <div class="section-inner">
+        <div class="section-tag">Planos e Preços</div>
+        <h2 id="planos-title">Invista no Crescimento da Sua Clínica</h2>
+        <p class="subtitle">Sem taxas de setup. Sem contratos longos. Cancele quando quiser.</p>
+        <div class="plans-grid" role="list">
+          <article class="plan-card" role="listitem">
+            <div class="plan-nome">Starter</div>
+            <div class="plan-preco">R$97<span>/mês</span></div>
+            <p class="plan-desc">Ideal para consultórios individuais</p>
+            <ul class="plan-features">
+              <li>1 dentista</li>
+              <li>Agendamento via WhatsApp</li>
+              <li>Confirmações automáticas</li>
+              <li>Prontuário digital básico</li>
+              <li>200 mensagens/dia</li>
+              <li>Suporte por email</li>
+            </ul>
+            <a href="#" class="btn btn-secondary" style="width:100%;justify-content:center">Começar Grátis</a>
+          </article>
+
+          <article class="plan-card destaque" role="listitem">
+            <div class="plan-badge">⭐ Mais Popular</div>
+            <div class="plan-nome">Profissional</div>
+            <div class="plan-preco">R$247<span>/mês</span></div>
+            <p class="plan-desc">Para clínicas em crescimento</p>
+            <ul class="plan-features">
+              <li>Até 3 dentistas</li>
+              <li>Todos os 7 agentes IA</li>
+              <li>Mensagens ilimitadas</li>
+              <li>CRM e campanhas automáticas</li>
+              <li>Financeiro + PIX/Boleto</li>
+              <li>Relatórios avançados</li>
+              <li>Suporte prioritário</li>
+            </ul>
+            <a href="#" class="btn btn-verde" style="width:100%;justify-content:center">Testar 7 Dias Grátis</a>
+          </article>
+
+          <article class="plan-card" role="listitem">
+            <div class="plan-nome">Clínica</div>
+            <div class="plan-preco">R$497<span>/mês</span></div>
+            <p class="plan-desc">Para clínicas consolidadas</p>
+            <ul class="plan-features">
+              <li>Dentistas ilimitados</li>
+              <li>Múltiplas unidades</li>
+              <li>BI e dashboards customizados</li>
+              <li>Integração com convênios</li>
+              <li>NFS-e automático</li>
+              <li>API para integrações</li>
+              <li>Gerente de conta dedicado</li>
+            </ul>
+            <a href="#" class="btn btn-secondary" style="width:100%;justify-content:center">Falar com Consultor</a>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:32px;color:var(--cinza-txt);font-size:.9rem">
+          ✅ 7 dias grátis · ✅ Sem cartão de crédito · ✅ Cancele a qualquer momento · ✅ Migração assistida gratuita
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FAQ
+    ════════════════════════════════════════ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="section-inner" style="text-align:center">
+        <div class="section-tag">Dúvidas Frequentes</div>
+        <h2 id="faq-title">Perguntas Frequentes</h2>
+        <p class="subtitle" style="margin:0 auto 48px">Tudo que você precisa saber antes de começar.</p>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">O sistema funciona com WhatsApp Business?</button>
+            <div class="faq-a">Sim! Integração via Evolution API com seu número do WhatsApp Business. O QR Code é escaneado diretamente no painel administrativo.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Preciso instalar algum programa?</button>
+            <div class="faq-a">Não. O OdontoSaaS Pro é 100% na nuvem. Acesse pelo navegador em qualquer dispositivo — computador, tablet ou celular.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">A IA pode marcar consultas erradas?</button>
+            <div class="faq-a">O sistema tem múltiplas camadas de proteção contra erros. A IA consulta a disponibilidade real antes de confirmar qualquer horário. Se a confiança for baixa, escala para atendente humano automaticamente.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">O sistema é conforme à LGPD?</button>
+            <div class="faq-a">Sim. Conformidade total com a LGPD, incluindo gestão de consentimento, criptografia AES-256, direito ao esquecimento e relatórios de privacidade.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Posso migrar do sistema atual?</button>
+            <div class="faq-a">Sim! Oferecemos migração assistida gratuita nos planos Profissional e Clínica, incluindo importação de pacientes, histórico e configurações.</div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Funciona para múltiplas unidades?</button>
+            <div class="faq-a">Sim! O plano Clínica suporta múltiplas unidades com dados isolados por unidade e visão consolidada para o gestor.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CTA FINAL
+    ════════════════════════════════════════ -->
+    <section class="cta-final" aria-labelledby="cta-title">
+      <h2 id="cta-title">Comece a Transformar Sua Clínica Hoje</h2>
+      <p>7 dias grátis, sem cartão de crédito, sem compromisso.</p>
+      <a href="#planos" class="btn btn-verde btn-lg" aria-label="Iniciar teste gratuito agora">🚀 Começar Teste Gratuito</a>
+      <p class="cta-garantia">✅ Setup em 10 minutos · ✅ Suporte em português · ✅ Cancele quando quiser</p>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer aria-label="Rodapé">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">🦷 OdontoSaaS Pro</div>
+        <p class="footer-desc">Sistema completo para gestão de clínicas odontológicas com IA multiagentes e atendimento automático via WhatsApp.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Produto</div>
+        <ul class="footer-links">
+          <li><a href="#agentes">IA Multiagentes</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="/changelog">Novidades</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/parceiros">Parceiros</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="/privacidade">Privacidade</a></li>
+          <li><a href="/termos">Termos de Uso</a></li>
+          <li><a href="/lgpd">LGPD</a></li>
+          <li><a href="/seguranca">Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 OdontoSaaS Pro · Souza Produções · Todos os direitos reservados</span>
+      <span>Feito com 🦷 no Brasil</span>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    // Animação do chat mockup
+    setTimeout(() => {
+      document.getElementById('typing').style.display = 'none';
+      document.getElementById('resposta1').style.display = 'block';
+      document.getElementById('meta1').style.display = 'block';
+    }, 2500);
+  </script>
+</body>
+</html>
